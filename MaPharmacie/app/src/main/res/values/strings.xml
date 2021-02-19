@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MaPharmacie</string>
+
+    <string name="hint_username">Nom d\'utilisateur</string>
+    <string name="hint_password">Mot de passe</string>
+    <string name="button_sign_in">Se connecter</string>
+    <string name="button_sign_up">S\'enregistrer</string>
+    <string name="button_send">Envoyer</string>
+    <string name="text_forgot_password">Mot de passe oublié ?</string>
+    <string name="text_signin_message">Bonjour, connecté vous a votre compte</string>
+    <string name="text_signin_social_media">Ou connecté-vous à travers un média social</string>
+    <string name="text_signup_social_media">Ou enregistrez-vous à partir d\'un média social</string>
+    <string name="text_signin_signup">Je n\'ai pas de compte ? <b>S\'enregistrer</b></string>
+    <string name="text_signup_terms">En vous inscrivant, vous acceptez nos <b>termes et conditions</b></string>
+    <string name="text_signup_message">Bonjour, créons votre compte</string>
+
+    <string name="text_forgot_password_title">Mot de passe oublié ? Pas d\'inquiétude</string>
+    <string name="text_forgot_password_message">Nous vous enverons un mail pour reinitialiser votre compte</string>
+
+    <string name="hint_email">Adresse mail</string>
+    <string name="hint_phone">téléphone</string>
+    <string name="hint_confirm_password">Confirmer le mot de passe</string>
+</resources>

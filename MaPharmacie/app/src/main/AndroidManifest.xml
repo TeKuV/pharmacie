@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mapharmacie">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/baton_pharm"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/baton_pharm"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SingleProduct" />
+        <activity android:name=".Settings" />
+        <activity android:name=".SigninActivity" />
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".Category"/>
+        <activity android:name=".ForgotPasswordActivity"/>
+        <activity android:name=".AboutApp"/>
+        <activity android:name=".MainActivity"/>
+    </application>
+
+</manifest>

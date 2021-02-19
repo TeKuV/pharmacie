@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <Toolbar
+        android:id="@+id/cardToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/espacement">
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="308dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Tous"
+                android:gravity="center"
+                android:textSize="@dimen/simple_text"
+                android:textColor="@color/white"/>
+
+            <Button
+                style="@style/primary"
+                android:id="@+id/btn_pay_cart"
+                android:layout_width="344dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="1"
+                android:text="Confirmer"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </Toolbar>
+
+    <ListView
+        android:id="@+id/card_list"
+        android:layout_width="match_parent"
+        android:layout_height="555dp"
+        android:layout_below="@id/cardToolBar">
+
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/ll_cart_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/ll_cart_option"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/espacement"
+        android:layout_marginBottom="60dp"
+        android:padding="2dp"
+
+        android:background="@drawable/shape2">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:text="Total"
+            android:textSize="@dimen/simple_text"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:text="1000000"
+            android:background="@drawable/shape"
+            android:textSize="@dimen/h2_text"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.75"
+            android:text="XAF"
+            android:textSize="@dimen/small_text"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

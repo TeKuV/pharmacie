@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".Settings">
+
+    <Toolbar
+        android:id="@+id/toolbar_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3A3A3A"
+        android:navigationIcon="@drawable/ic_back_white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Paramètres"
+                android:textColor="#E4E4E4"
+                android:textSize="@dimen/h1_text" />
+        </LinearLayout>
+    </Toolbar>
+
+    <ScrollView
+        android:layout_marginTop="@dimen/espacement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_setting">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/first_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolbar_setting"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingTop="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Profil"
+                    android:textSize="@dimen/simple_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Adresse de livraison"
+                    android:textSize="@dimen/simple_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/second_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first_setting"
+                android:layout_marginTop="@dimen/espacement"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/espacement">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/espacement"
+                        android:paddingTop="@dimen/espacement"
+                        android:text="Devise"
+                        android:textSize="@dimen/simple_text" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/espacement"
+                        android:text="XAF"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/espacement">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/espacement"
+                        android:text="Langue"
+                        android:textSize="@dimen/simple_text" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/espacement"
+                        android:text="Français"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/third_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/second_setting"
+                android:layout_marginTop="@dimen/espacement"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingTop="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Parametres des notifications"
+                    android:textSize="@dimen/simple_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingTop="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Vider la cache"
+                    android:textSize="@dimen/simple_text" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingTop="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Politique de confidentialité"
+                    android:textSize="@dimen/simple_text" />
+
+                <TextView
+                    android:id="@+id/tv_info_legale"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/espacement"
+                    android:paddingTop="@dimen/espacement"
+                    android:paddingBottom="@dimen/espacement"
+                    android:text="Information légale"
+                    android:clickable="true"
+                    android:textSize="@dimen/simple_text" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/espacement">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/espacement"
+                        android:text="Version"
+                        android:textSize="@dimen/simple_text" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/espacement"
+                        android:text="1.0"
+                        android:textSize="@dimen/simple_text" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

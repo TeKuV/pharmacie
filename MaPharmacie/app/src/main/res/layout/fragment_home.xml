@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Toolbar
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="0.25"
+            android:layout_marginRight="20dp"
+            android:paddingLeft="250dp"
+            android:layout_marginLeft="20dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.75"
+                android:layout_margin="7sp"
+                android:layout_gravity="center"
+                android:tooltipText="Recherche le produit entré"
+                android:src="@drawable/ic_search"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="7sp"
+                android:layout_weight="0.75"
+                android:src="@drawable/qr_code"
+                android:tooltipText="Scanner une ordonnance" />
+        </LinearLayout>
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="625dp"
+        android:layout_below="@+id/search_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:id="@+id/top_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search_layout"
+                android:layout_margin="7dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/espacement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/categories" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Catégories"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/heure_vente" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Promos/soldes"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/soleil" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="Marque à découvrir"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/actualite" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:text="fil d'actualité"
+                            android:textColor="#FFFFFF" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+            <TextView
+                android:id="@+id/welcom_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15sp"
+                android:text="Bienvenue !"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/simple_text"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/baner"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/welcom_text"
+                android:orientation="vertical">
+
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:slideInterval="5000"
+                    app:radius="6dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/Recents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/baner"
+                android:gravity="center"
+                android:padding="15sp"
+                android:textColor="#FFFFFF"
+                android:text="Recommandes pour vous"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/Recents"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/wave1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:padding="@dimen/espacement"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@id/prod_1"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item2"
+                        android:padding="@dimen/espacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/prod_2"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/wave2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:padding="@dimen/espacement"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@id/prod_3"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item4"
+                        android:padding="@dimen/espacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/prod_4"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/wave3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:padding="@dimen/espacement"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@id/prod_5"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item6"
+                        android:padding="@dimen/espacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/prod_6"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/wave4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="4dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:padding="@dimen/espacement"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@id/prod_7"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/recent_item8"
+                        android:padding="@dimen/espacement"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2sp"
+                        android:layout_weight="1"
+                        android:elevation="20sp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/prod_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@mipmap/ic_launcher_round" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_below="@+id/prod_8"
+                            android:gravity="center_horizontal"
+                            android:text="Products" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
